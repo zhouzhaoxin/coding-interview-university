@@ -50,12 +50,8 @@ class Hash:
         if self.curr_size > len(self.data) / 2:
             self.expend()
 
-    def hash(self, k, size):
-        """
-        :param k:
-        :param m: size of the tale
-        :return: k % m
-        """
+    @staticmethod
+    def hash(k, size):
         return int(bin(int(''.join([str(ord(c)) for c in str(k)]))), base=2) % size
 
     def exist(self, key):
