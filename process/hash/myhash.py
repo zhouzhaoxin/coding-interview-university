@@ -1,7 +1,9 @@
 # hash 函数需要一个 size 参数，扩容使用
 # 列表中的值：目前看需要三个：key，value，delete
-# shirink 数据量小于 size / 4
+# shrink 数据量小于 size / 4
 # expand 数据大于 size / 2
+
+
 class Hash:
     def __init__(self, initial_size=8):
         self.curr_size = 0
