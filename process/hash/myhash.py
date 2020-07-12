@@ -1,5 +1,7 @@
 # hash 函数需要一个 size 参数，扩容使用
 # 列表中的值：目前看需要三个：key，value，delete
+# shirink 数据量小于 size / 4
+# expand 数据大于 size / 2
 class Hash:
     def __init__(self, initial_size=8):
         self.curr_size = 0
@@ -8,8 +10,15 @@ class Hash:
     def __str__(self):
         return str([(i, j) for i, j, d in self.data if d != 1 and i])
 
+    def shrink(self):
+        tmp = [(None, None, None) for _ in range(int(len(self.data) / 2))]
+        self.re_hash(tmp)
+
     def expend(self):
         tmp = [(None, None, None) for _ in range(len(self.data) * 2)]
+        self.re_hash(tmp)
+
+    def re_hash(self, tmp):
         for key, value, d in self.data:
             index = self.hash(key, len(tmp))
             while True:
@@ -70,6 +79,9 @@ class Hash:
             return -1
         k, v, d = self.data[index]
         self.data[index] = k, v, 1
+        self.curr_size -= 1
+        if self.curr_size < len(self.data) / 4:
+            self.shrink()
         return index
 
 
@@ -82,4 +94,7 @@ h.add("hello5", 1)
 print("hello 是否存在", h.exist("hello"))
 print("hello4 的值为 ", h.get("hello4"))
 print(h.remove("hello4"))
+print(h.remove("hello3"))
+print(h.remove("hello2"))
+
 print("hash 表中的数据", h)
