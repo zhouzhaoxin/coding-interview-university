@@ -2,7 +2,7 @@
 # 列表中的值：目前看需要三个：key，value，delete
 # shrink 数据量小于 size / 4
 # expand 数据大于 size / 2
-
+# 因为需要删除，所以 size 需要单独记录
 
 class Hash:
     def __init__(self, initial_size=8):
