@@ -4,6 +4,27 @@
 # expand 数据大于 size / 2
 # 因为需要删除，所以 size 需要单独记录
 
+# universal hash family 用于在 rehash 的时候重新选择hash function，以更小的冲突重新生成 hash table
+# ((ax + b))mod p) mod m
+# a b is random
+# p is a prime 大于所有可能结果集
+# x is the key need to hash
+
+# polyhash
+# hash <- 0
+# for i from |S| - 1 down to 0:
+#     hash = (hash * x + S[i]) mod p
+
+
+# java use x eq 31
+
+# 可以使用 hash 对比文件，使用 rolling hashing 来处理大文件，对比的时候选择不同的hash函数来避免hash冲突，
+# 有函数能知道有没有冲突，但是一般使用3到四个不同的hash函数，就很少能看见冲突了
+
+
+
+# 分布式 hash
+# overlay network
 class Hash:
     def __init__(self, initial_size=8):
         self.curr_size = 0
