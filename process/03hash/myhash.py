@@ -22,7 +22,6 @@
 # 有函数能知道有没有冲突，但是一般使用3到四个不同的hash函数，就很少能看见冲突了
 
 
-
 # 分布式 hash
 # overlay network
 class Hash:
