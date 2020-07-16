@@ -331,11 +331,11 @@ Write code on a whiteboard or paper, not a computer. Test with some sample input
         - [X] [C Programming Tutorial 2-10: Bitwise Operators (video)](https://www.youtube.com/watch?v=d0AwjSpNXR0)
         - [X] [Bit Manipulation](https://en.wikipedia.org/wiki/Bit_manipulation)
         - [X] [Bitwise Operation](https://en.wikipedia.org/wiki/Bitwise_operation)
-        - [X] [Bithacks](https://graphics.stanford.edu/~seander/bithacks.html)
+        - [ ] [Bithacks](https://graphics.stanford.edu/~seander/bithacks.html)
         - [ ] [The Bit Twiddler](https://bits.stephan-brumme.com/)
         - [ ] [The Bit Twiddler Interactive](https://bits.stephan-brumme.com/interactive.html)
-        - [ ] [Bit Hacks (video)](https://www.youtube.com/watch?v=ZusiKXcz_ac)
-    - [ ] 2s and 1s complement
+        - [X] [Bit Hacks (video)](https://www.youtube.com/watch?v=ZusiKXcz_ac)
+    - [X] 2s and 1s complement
         - [Binary: Plusses & Minuses (Why We Use Two's Complement) (video)](https://www.youtube.com/watch?v=lKTsv6iVxV4)
         - [1s Complement](https://en.wikipedia.org/wiki/Ones%27_complement)
         - [2s Complement](https://en.wikipedia.org/wiki/Two%27s_complement)
