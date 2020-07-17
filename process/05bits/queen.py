@@ -29,5 +29,5 @@ def n_queen_recursive(n):
 
 n_queen_recursive(4)
 
-
 # http://gregtrowbridge.com/a-bitwise-solution-to-the-n-queens-problem-in-javascript/
+
