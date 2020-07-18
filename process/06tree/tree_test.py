@@ -23,6 +23,16 @@ class BST:
 
         t(self.root)
 
+    def traversal_bfs(self):
+        a = [self.root]
+        while a:
+            x = a.pop()
+            if x:
+                print(x.val)
+                a.append(x.left_child)
+                a.append(x.right_child)
+
+
     def to_list(self):
         """按顺序从小到大遍历"""
         res = []
@@ -91,3 +101,6 @@ class Test(unittest.TestCase):
         self.assertFalse(self.tree.find_recursive(7))
         self.assertTrue(self.tree.find_recursive(8))
         self.assertTrue(self.tree.find_recursive(14))
+
+    def test_bfs(self):
+        self.tree.traversal_bfs()
