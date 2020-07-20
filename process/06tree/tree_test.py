@@ -32,7 +32,6 @@ class BST:
                 a.append(x.left_child)
                 a.append(x.right_child)
 
-
     def to_list(self):
         """按顺序从小到大遍历"""
         res = []
