@@ -142,6 +142,22 @@ class Test(unittest.TestCase):
         self.h.heapify2(arr)
         print(arr)
 
+
+def heapify(arr, n, i):
+    largest = i
+    l = 2 * i + 1
+    r = 2 * i + 2
+
+    if l < n and arr[l] > arr[largest]:
+        largest = l
+    if r < n and arr[r] > arr[largest]:
+        largest = r
+
+    if i != largest:
+        arr[largest], arr[i] = arr[i], arr[largest]
+        heapify(arr, n, largest)
+
+
 """
 # Python program for implementation of heap Sort 
   
